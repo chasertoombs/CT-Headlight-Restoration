@@ -661,41 +661,4 @@ Mobile headlight restoration service
           </a>
         </div>
         <!-- EMAIL -->
-        <div class="contact-card">
-          <div class="contact-icon">✉️</div>
-          <h3>Email</h3>
-          <p>
-            Send us a message for questions or scheduling.
-          </p>
-          <a
-            href="mailto:Chaser.toombs@icloud.com"
-            class="contact-link"
-          >
-            Chaser.toombs@icloud.com
-          </a>
-        </div>
-      </div>
-      <div class="contact-button">
-        <a
-          href="tel:6149479693"
-          class="btn btn-red"
-        >
-          📱 Call or Text 614-947-9693
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- =========================
-       FOOTER
-  ========================= -->
-  <footer>
-    <p>
-      © 2026 <strong>CT Headlight Restorations</strong>.
-      All rights reserved.
-    </p>
-    <p style="margin-top: 5px;">
-      Professional Headlight Restoration
-    </p>
-  </footer>
-</body>
-</html>
+        <>

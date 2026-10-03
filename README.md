@@ -1,2 +1,701 @@
 # CT-Headlight-Restoration
 Mobile headlight restoration service
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CT Headlight Restorations | Professional Headlight Restoration</title>
+  <meta name="description"
+        content="CT Headlight Restorations provides professional headlight restoration for $100. Call, text, email, or message us on Instagram to schedule.">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #070707;
+      color: #fff;
+      line-height: 1.6;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    /* =========================
+       NAVIGATION
+    ========================= */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(5, 5, 5, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #222;
+    }
+    .nav-container {
+      max-width: 1150px;
+      margin: auto;
+      padding: 17px 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+    .logo span {
+      color: #e50914;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: #ddd;
+      font-size: 0.95rem;
+      transition: 0.3s;
+    }
+    .nav-links a:hover {
+      color: #e50914;
+    }
+    .nav-contact {
+      background: #e50914;
+      color: #fff !important;
+      padding: 10px 17px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    /* =========================
+       HERO
+    ========================= */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 130px 20px 80px;
+      background:
+        linear-gradient(
+          rgba(0,0,0,.70),
+          rgba(0,0,0,.92)
+        ),
+        radial-gradient(
+          circle at center,
+          #292929,
+          #050505 70%
+        );
+    }
+    .hero-content {
+      max-width: 850px;
+    }
+    .badge {
+      display: inline-block;
+      color: #e50914;
+      border: 1px solid #e50914;
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      margin-bottom: 22px;
+    }
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: 0.92;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-bottom: 25px;
+    }
+    .hero h1 span {
+      color: #e50914;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: 0 auto 35px;
+      color: #c5c5c5;
+      font-size: 1.12rem;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 14px 26px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .btn-red {
+      background: #e50914;
+      color: white;
+    }
+    .btn-red:hover {
+      background: #b90710;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      border: 1px solid #555;
+      color: white;
+    }
+    .btn-outline:hover {
+      border-color: #e50914;
+      color: #e50914;
+    }
+    /* =========================
+       GENERAL
+    ========================= */
+    section {
+      padding: 90px 20px;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-heading span {
+      color: #e50914;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .section-heading h2 {
+      font-size: 2.7rem;
+      margin-top: 8px;
+    }
+    .section-heading p {
+      color: #999;
+      margin-top: 10px;
+    }
+    /* =========================
+       SERVICES
+    ========================= */
+    .services {
+      background: #0d0d0d;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .service-card {
+      background: #151515;
+      border: 1px solid #252525;
+      padding: 30px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #e50914;
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+    .service-card h3 {
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      color: #999;
+      font-size: 0.95rem;
+    }
+    /* =========================
+       PRICING
+    ========================= */
+    .pricing {
+      background: #080808;
+    }
+    .pricing-card {
+      max-width: 500px;
+      margin: auto;
+      background: #121212;
+      border: 2px solid #e50914;
+      border-radius: 13px;
+      padding: 40px 30px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 0 35px rgba(229, 9, 20, 0.12);
+    }
+    .popular {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #e50914;
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 0.72rem;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+    .pricing-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .price {
+      font-size: 4rem;
+      font-weight: 900;
+      line-height: 1;
+      margin: 15px 0 25px;
+    }
+    .price span {
+      color: #888;
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+    .features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+    .features li {
+      padding: 10px 0;
+      border-bottom: 1px solid #252525;
+      color: #ccc;
+    }
+    .features li::before {
+      content: "✓";
+      color: #e50914;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    /* =========================
+       ABOUT
+    ========================= */
+    .about {
+      background: #0d0d0d;
+    }
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+    .small-title {
+      color: #e50914;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+    .about-text h2 {
+      font-size: 2.7rem;
+      line-height: 1.1;
+      margin: 10px 0 20px;
+    }
+    .about-text h2 span {
+      color: #e50914;
+    }
+    .about-text p {
+      color: #aaa;
+      margin-bottom: 15px;
+    }
+    .check-list {
+      list-style: none;
+      margin-top: 25px;
+    }
+    .check-list li {
+      color: #ddd;
+      margin: 12px 0;
+    }
+    .check-list li::before {
+      content: "✓";
+      color: #e50914;
+      font-weight: bold;
+      margin-right: 12px;
+    }
+    .about-box {
+      min-height: 330px;
+      border: 1px solid #292929;
+      border-radius: 15px;
+      background:
+        radial-gradient(
+          circle at center,
+          #292929,
+          #090909 70%
+        );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+    .about-box h3 {
+      font-size: 2.2rem;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .about-box h3 span {
+      color: #e50914;
+    }
+    .about-box p {
+      color: #888;
+      margin-top: 15px;
+    }
+    /* =========================
+       CONTACT
+    ========================= */
+    .contact {
+      background: #080808;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .contact-card {
+      background: #141414;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      padding: 32px 22px;
+      text-align: center;
+      transition: 0.3s;
+    }
+    .contact-card:hover {
+      border-color: #e50914;
+      transform: translateY(-4px);
+    }
+    .contact-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .contact-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      color: #999;
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+    }
+    .contact-link {
+      display: block;
+      padding: 13px 8px;
+      background: #090909;
+      border: 1px solid #292929;
+      border-radius: 7px;
+      transition: 0.3s;
+      word-break: break-word;
+    }
+    .contact-link:hover {
+      border-color: #e50914;
+      color: #e50914;
+    }
+    .contact-button {
+      text-align: center;
+      margin-top: 35px;
+    }
+    /* =========================
+       FOOTER
+    ========================= */
+    footer {
+      border-top: 1px solid #222;
+      background: #050505;
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      font-size: 0.9rem;
+    }
+    footer strong {
+      color: white;
+    }
+    /* =========================
+       MOBILE
+    ========================= */
+    @media (max-width: 800px) {
+      .nav-links {
+        display: none;
+      }
+      .service-grid,
+      .about-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 3.2rem;
+      }
+      .section-heading h2,
+      .about-text h2 {
+        font-size: 2.2rem;
+      }
+      section {
+        padding: 70px 18px;
+      }
+      .pricing-card {
+        padding: 35px 22px;
+      }
+      .price {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+  <nav>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        CT <span>HEADLIGHT</span> RESTORATIONS
+      </a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#about">About</a></li>
+        <li>
+          <a href="#contact" class="nav-contact">
+            Contact
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- =========================
+       HERO
+  ========================= -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="badge">
+        PROFESSIONAL HEADLIGHT RESTORATION
+      </div>
+      <h1>
+        Bring Back<br>
+        The <span>Clarity.</span>
+      </h1>
+      <p>
+        Restore cloudy, yellow and oxidized headlights with a
+        professional restoration from CT Headlight Restorations.
+      </p>
+      <div class="buttons">
+        <a href="#pricing" class="btn btn-red">
+          View Pricing
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       SERVICES
+  ========================= -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-heading">
+        <span>What We Do</span>
+        <h2>Our Service</h2>
+        <p>
+          A professional process designed to restore your headlights
+          and refresh the appearance of your vehicle.
+        </p>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">💡</div>
+          <h3>Headlight Restoration</h3>
+          <p>
+            Remove oxidation, yellowing and haze to restore
+            a cleaner and clearer appearance.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3>Multi-Stage Polishing</h3>
+          <p>
+            Our restoration process helps bring back the
+            clarity and finish of your headlights.
+          </p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🛡️</div>
+          <h3>UV Protection</h3>
+          <p>
+            A protective coating is applied to help maintain
+            the restored finish.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       PRICING
+  ========================= -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-heading">
+        <span>Simple Pricing</span>
+        <h2>One Price. Full Restoration.</h2>
+        <p>
+          No confusing packages. One professional restoration service.
+        </p>
+      </div>
+      <div class="pricing-card">
+        <div class="popular">
+          COMPLETE RESTORATION
+        </div>
+        <h3>Headlight Restoration</h3>
+        <div class="price">
+          $100 <span>/ vehicle</span>
+        </div>
+        <ul class="features">
+          <li>Deep headlight restoration</li>
+          <li>Oxidation removal</li>
+          <li>Multi-stage polishing</li>
+          <li>UV protective coating</li>
+          <li>Clean, clear finish</li>
+        </ul>
+        <a href="#contact" class="btn btn-red">
+          Book Now
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       ABOUT
+  ========================= -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <div class="small-title">
+            WHY CT HEADLIGHT RESTORATIONS?
+          </div>
+          <h2>
+            Make Your Vehicle<br>
+            <span>Look New Again.</span>
+          </h2>
+          <p>
+            Cloudy and yellow headlights can take away from the
+            appearance of an otherwise clean vehicle.
+          </p>
+          <p>
+            CT Headlight Restorations focuses on quality,
+            attention to detail and a clean professional finish.
+          </p>
+          <ul class="check-list">
+            <li>Professional restoration process</li>
+            <li>One simple $100 price</li>
+            <li>Convenient scheduling</li>
+            <li>Quality-focused results</li>
+          </ul>
+        </div>
+        <div class="about-box">
+          <div>
+            <h3>
+              CLEARER LIGHTS.<br>
+              <span>BETTER LOOK.</span>
+            </h3>
+            <p>
+              Restore your headlights.<br>
+              Refresh your vehicle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       CONTACT
+  ========================= -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <span>Let's Get Started</span>
+        <h2>Contact Us</h2>
+        <p>
+          Ready to restore your headlights?
+          Reach out and schedule your service.
+        </p>
+      </div>
+      <div class="contact-grid">
+        <!-- PHONE -->
+        <div class="contact-card">
+          <div class="contact-icon">📱</div>
+          <h3>Call or Text</h3>
+          <p>
+            Call or text us to schedule your restoration.
+          </p>
+          <a
+            href="tel:6149479693"
+            class="contact-link"
+          >
+            614-947-9693
+          </a>
+        </div>
+        <!-- INSTAGRAM -->
+        <div class="contact-card">
+          <div class="contact-icon">📸</div>
+          <h3>Instagram</h3>
+          <p>
+            Send us a DM and check out our work.
+          </p>
+          <a
+            href="https://instagram.com/ct.headlight_restoration"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link"
+          >
+            @ct.headlight_restoration
+          </a>
+        </div>
+        <!-- EMAIL -->
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <h3>Email</h3>
+          <p>
+            Send us a message for questions or scheduling.
+          </p>
+          <a
+            href="mailto:Chaser.toombs@icloud.com"
+            class="contact-link"
+          >
+            Chaser.toombs@icloud.com
+          </a>
+        </div>
+      </div>
+      <div class="contact-button">
+        <a
+          href="tel:6149479693"
+          class="btn btn-red"
+        >
+          📱 Call or Text 614-947-9693
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- =========================
+       FOOTER
+  ========================= -->
+  <footer>
+    <p>
+      © 2026 <strong>CT Headlight Restorations</strong>.
+      All rights reserved.
+    </p>
+    <p style="margin-top: 5px;">
+      Professional Headlight Restoration
+    </p>
+  </footer>
+</body>
+</html>
